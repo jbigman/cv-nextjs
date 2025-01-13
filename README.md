@@ -1,35 +1,16 @@
-
-  
-
-
-  
-
 ## Intégration continue avec Github actions.
-
-  
 
 - Se déclenche sur n'importe quelle push/merge de la branche master. (Tuto complet dispo sur https://github.com/gregrickaby/nextjs-github-pages)
 
-  
+- Deploy sur github-pages pour être accessible sur https://jbigman.github.io/cv-nextjs
 
-- Deploy sur github-pages pour être accessible sur https://jbigman.github.io/cv-react
-
-  
-
-- jbigman.github.io redirige tous les utilisateurs sur jbigman.github.io/cv-react
-
-  
+- jbigman.github.io redirige tous les utilisateurs sur jbigman.github.io/cv-nextjs
 
 ## Developpement en local
-
-  
 
 `yarn install` pour telecharger toutes les dépendances
 
 `yarn serve` Pour tester l'application en localhost
-
-  
-  
 
 ## Dépendences
 
