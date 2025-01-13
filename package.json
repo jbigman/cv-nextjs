@@ -4,7 +4,7 @@
 	"private": false,
 	"homepage": "https://jbigman.github.io/cv-react/",
 	"dependencies": {
-		"@types/node": "^22.10.2",
+		"@types/node": "^22.10.5",
 		"@types/react": "^19.0.1",
 		"@types/react-dom": "^19.0.2",
 		"next": "^15.1.0",
