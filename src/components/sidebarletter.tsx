@@ -1,22 +1,20 @@
 import Image from 'next/image'
-import { FiMapPin, FiMail, FiPhone } from 'react-icons/fi'
+import type { ReactElement } from 'react'
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 import photo from '../../public/img/avatar.png'
 import cv from '../json/curiculum.json'
-import sidebarStyles from './header.module.scss'
 import Block from './block'
-import type { ReactElement } from 'react'
+import sidebarStyles from './header.module.scss'
 
 const SideBarLetter = () => {
-
-  const Element = (props: { title: ReactElement, children: ReactElement | ReactElement[] }) => {
+  const Element = (props: {
+    title: ReactElement
+    children: ReactElement | ReactElement[]
+  }) => {
     return (
       <div className={sidebarStyles.element}>
-        <div className={sidebarStyles.title}>
-          {props.title}
-        </div>
-        <div className={sidebarStyles.content}>
-          {props.children}
-        </div>
+        <div className={sidebarStyles.title}>{props.title}</div>
+        <div className={sidebarStyles.content}>{props.children}</div>
       </div>
     )
   }
@@ -32,7 +30,9 @@ const SideBarLetter = () => {
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
         />
-        <h1>{cv.firstName} {cv.lastName}</h1>
+        <h1>
+          {cv.firstName} {cv.lastName}
+        </h1>
       </div>
       <div className={sidebarStyles.right}>
         <Block title={'Fullstack Developer'}>
@@ -51,7 +51,6 @@ const SideBarLetter = () => {
               {cv.phone}
             </a>
           </Element>
-
         </Block>
       </div>
     </div>

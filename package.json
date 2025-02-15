@@ -22,7 +22,7 @@
 	},
 	"scripts": {
 		"serve": "next dev --turbo",
-		"lint": "npx @biomejs/biome lint ./src",
+		"lint": "npx @biomejs/biome check --write ./src",
 		"build": "next build",
 		"deploy": "node gh-pages-publish.js",
 		"bump": "npx ncu -u"
