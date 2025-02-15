@@ -3,7 +3,6 @@ import type { IExperience } from '../Interface/IExperience'
 import experienceStyles from './experience.module.scss'
 
 const Experience = (props: { data: IExperience[] }) => {
-
   const expContent = (exp: IExperience) => {
     return (
       <Fragment key={exp.title}>
@@ -24,43 +23,36 @@ const Experience = (props: { data: IExperience[] }) => {
             </a>
           ) : (
             <>
-              {
-                exp.company ?
-                  <div
-                    className={`${experienceStyles.company}`}
-                  >
-                    <span>{exp.company}</span>
+              {exp.company ? (
+                <div className={`${experienceStyles.company}`}>
+                  <span>{exp.company}</span>
 
-                    {exp.duration && (
-                      <span className={experienceStyles.duration}>
-                        {exp.duration}
-                      </span>
-                    )}
-                  </div>
-                  :
-                  <div />
-              }
+                  {exp.duration && (
+                    <span className={experienceStyles.duration}>
+                      {exp.duration}
+                    </span>
+                  )}
+                </div>
+              ) : (
+                <div />
+              )}
             </>
           )}
 
-          <div className='row text-small'>
+          <div className="row text-small">
             <span>{exp.dateStart}</span>
             {exp.dateStart && exp.dateEnd && '-'}
             <span>{exp.dateEnd}</span>
           </div>
         </div>
-        {exp.title &&
-          <h3 className={experienceStyles.title} dangerouslySetInnerHTML={{ __html: exp.title }} />
-        }
-        {
-          exp.description &&
+        {exp.title && <h3 className={experienceStyles.title}>{exp.title}</h3>}
+        {exp.description && (
           <div style={{ fontStyle: 'italic' }}>
             {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
             <div dangerouslySetInnerHTML={{ __html: exp.description }} />
           </div>
-        }
-        {
-          exp.tasks && exp.tasks.length > 0 &&
+        )}
+        {exp.tasks && exp.tasks.length > 0 && (
           <ul className={`${experienceStyles.shift}`}>
             {exp.tasks.map((task) => {
               return (
@@ -71,9 +63,8 @@ const Experience = (props: { data: IExperience[] }) => {
               )
             })}
           </ul>
-        }
-        {
-          exp.stack && exp.stack.length > 0 &&
+        )}
+        {exp.stack && exp.stack.length > 0 && (
           <div className={`${experienceStyles.shift}`}>
             {exp.stack.map((task) => {
               return (
@@ -84,7 +75,7 @@ const Experience = (props: { data: IExperience[] }) => {
               )
             })}
           </div>
-        }
+        )}
       </Fragment>
     )
   }
@@ -93,11 +84,9 @@ const Experience = (props: { data: IExperience[] }) => {
     return (
       <div className={experienceStyles.experience}>
         <div className={`${experienceStyles.details} column`}>
-          {
-            props.data.map((elem) => {
-              return expContent(elem)
-            })
-          }
+          {props.data.map((elem) => {
+            return expContent(elem)
+          })}
         </div>
       </div>
     )

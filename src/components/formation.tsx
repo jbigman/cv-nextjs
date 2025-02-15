@@ -2,7 +2,6 @@ import type { IExperience } from '../Interface/IExperience'
 import experienceStyles from './experience.module.scss'
 
 const Formation = (props: { data: IExperience }) => {
-
   const Company = (exp: IExperience) => {
     return (
       <div className={`${experienceStyles.subtile}`}>
@@ -15,40 +14,41 @@ const Formation = (props: { data: IExperience }) => {
           >
             {exp.company}
             {exp.duration && (
-              <span className={experienceStyles.duration}>
-                {exp.duration}
-              </span>
+              <span className={experienceStyles.duration}>{exp.duration}</span>
             )}
           </a>
         ) : (
-          <div
-            className={`${experienceStyles.company}`}
-          >
+          <div className={`${experienceStyles.company}`}>
             {exp.company}
             {exp.duration && (
-              <span className={experienceStyles.duration}>
-                {exp.duration}
-              </span>
+              <span className={experienceStyles.duration}>{exp.duration}</span>
             )}
           </div>
         )}
-
       </div>
     )
   }
   const expContent = (exp: IExperience) => {
     return (
-      <div key={exp.title + exp.dateEnd} className='row vcenter' style={{ gap: '20px', alignItems: 'center' }}>
-        {exp.title &&
-          <h3 style={{ flex: 1 }} className={experienceStyles.title} dangerouslySetInnerHTML={{ __html: exp.title }} />
-        }
+      <div
+        key={exp.title + exp.dateEnd}
+        className="row vcenter"
+        style={{ gap: '20px', alignItems: 'center' }}
+      >
+        {exp.title && (
+          <h3
+            style={{ flex: 1 }}
+            className={experienceStyles.title}
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+            dangerouslySetInnerHTML={{ __html: exp.title }}
+          />
+        )}
         {Company(exp)}
-        <div className='row text-small'>
+        <div className="row text-small">
           <span>{exp.dateStart}</span>
           {exp.dateStart && exp.dateEnd && '-'}
           <span>{exp.dateEnd}</span>
         </div>
-
       </div>
     )
   }
@@ -56,9 +56,7 @@ const Formation = (props: { data: IExperience }) => {
   return (
     <div className={experienceStyles.experience}>
       <div className={`${experienceStyles.details} column`}>
-        {
-          expContent(props.data)
-        }
+        {expContent(props.data)}
       </div>
     </div>
   )
