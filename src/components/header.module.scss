@@ -1,4 +1,4 @@
-@import '../style/css/variables.scss';
+@use '../style/css/variables' as *;
 
 .clickable {
   text-decoration: none;
