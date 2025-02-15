@@ -2,8 +2,8 @@ import type { IExperience } from './IExperience'
 import type { ISkill } from './ISkill'
 
 export interface ICuriculum {
-  nom: string
-  prenom: string
+  lastName: string
+  firstName: string
   address?: string
   email?: string
   phone?: string
@@ -12,6 +12,6 @@ export interface ICuriculum {
   drivingLicence?: string
 
   experiences: IExperience[][]
-  formations: IExperience[][]
+  formations: IExperience[]
   skills: ISkill[]
 }

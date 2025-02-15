@@ -4,7 +4,6 @@ import Block from './block'
 import styles from './curiculum.module.scss'
 import Experience from './experience'
 import Formation from './formation'
-import NetWork from './network'
 import Header from './header'
 import Skill from './skill'
 
@@ -43,8 +42,8 @@ const Curiculum = () => {
                   })}
               </Block>   
             <Block title={'Formation'}>
-              {cv.formations.map((exp: IExperience[]) => {
-                return <Formation key={exp[0].title} data={exp} />
+              {cv.formations.map((exp: IExperience) => {
+                return <Formation key={exp.title} data={exp} />
               })}
             </Block> 
             </div>

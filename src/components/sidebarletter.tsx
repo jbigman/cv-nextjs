@@ -8,7 +8,7 @@ import type { ReactElement } from 'react'
 
 const SideBarLetter = () => {
 
-  const Element = (props: {title: ReactElement, children: ReactElement | ReactElement[]}) => {
+  const Element = (props: { title: ReactElement, children: ReactElement | ReactElement[] }) => {
     return (
       <div className={sidebarStyles.element}>
         <div className={sidebarStyles.title}>
@@ -32,9 +32,9 @@ const SideBarLetter = () => {
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
         />
+        <h1>{cv.firstName} {cv.lastName}</h1>
       </div>
       <div className={sidebarStyles.right}>
-      <h1>Jérémie GAMBIN</h1>
         <Block title={'Fullstack Developer'}>
           <Element title={<FiMapPin />}>
             <div> {cv.address}</div>

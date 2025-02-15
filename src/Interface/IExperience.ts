@@ -4,8 +4,8 @@ export interface IExperience {
   company?: string
   link?: string
   duration?: string
-  tasks: string[]
-  stack: string[]
+  tasks?: string[]
+  stack?: string[]
   dateStart?: number | string
   dateEnd?: number | string
 }

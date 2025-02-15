@@ -6,13 +6,14 @@
 /* force background colors in print */
 * {
   font-family: 'Lato', sans-serif;
-  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+  -webkit-print-color-adjust: exact !important;
+  /* Chrome, Safari 6 – 15.3, Edge */
   print-color-adjust: exact !important;
-  
+
   body {
     overflow-x: hidden;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
@@ -22,33 +23,43 @@
     font-size: 36px;
     margin: 0;
   }
-  
+}
+
+h3 {
+  font-size: 13px;
+}
+
+.text-small {
+  font-size: 10px;
 }
 
 .no-decoration {
   text-decoration: none;
-  font-family: inherit!important;
+  font-family: inherit !important;
+
   &:hover {
-    color: inherit!important
+    color: inherit !important
   }
 }
-.row { 
+
+.row {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   flex-wrap: wrap;
-  
+
   &.center {
     justify-content: center;
   }
-  
+
   &.reverse {
     flex-direction: row-reverse;
   }
 }
 
-.column { 
+.column {
   display: flex;
   flex-direction: column;
+
   &.center {
     align-items: center;
   }
@@ -66,17 +77,18 @@
   .hidden-small {
     display: none;
   }
-  
+
   .hidden-large {
     display: inherit;
   }
-  
+
 }
+
 @media print {
   .hidden-small {
     display: none;
   }
-  
+
   .hidden-large {
     display: inherit;
   }

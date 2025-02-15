@@ -54,7 +54,7 @@ const Header = () => {
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
         />
-        <h1>{cv.prenom} {cv.nom}</h1>
+        <h1>{cv.firstName} {cv.lastName}</h1>
       </div>
       <div className={sidebarStyles.right}>
         <div className={sidebarStyles.list}>

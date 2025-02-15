@@ -7,17 +7,6 @@
   background-color: $background-color-light;
   padding: calc($main-padding / 2 ) $main-padding;
   
-  .shift {
-    li::marker {
-      color: $background-color-header;
-    }
-    
-    li {
-      padding-bottom: 2px ;
-    }
-  }  
-  
-  
   .subtile {
     display: flex;
     justify-content: space-between;
@@ -36,9 +25,7 @@
   }
   
   .title {
-    font-size: 14px;
-    color: $background-color-header;
-    font-weight: 600;
+    color: $font-title-color;
   }
   
   .company {
