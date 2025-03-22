@@ -18,7 +18,7 @@
 		"@biomejs/biome": "1.9.4",
 		"@types/gh-pages": "^6.1.0",
 		"gh-pages": "^6.3.0",
-		"npm-check-updates": "^17.1.14"
+		"npm-check-updates": "^17.1.16"
 	},
 	"scripts": {
 		"serve": "next dev --turbo",
