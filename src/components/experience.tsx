@@ -45,7 +45,8 @@ const Experience = (props: { data: IExperience[] }) => {
             <span>{exp.dateEnd}</span>
           </div>
         </div>
-        {exp.title && <h3 className={experienceStyles.title}>{exp.title}</h3>}
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
+        {exp.title && <h3 className={experienceStyles.title} dangerouslySetInnerHTML={{ __html: exp.title }} />}
         {exp.description && (
           <div style={{ fontStyle: 'italic' }}>
             {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}

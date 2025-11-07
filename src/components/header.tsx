@@ -11,7 +11,6 @@ const Header = () => {
   const Element = (props: { title: ReactElement; children: ReactElement }) => {
     return (
       <div className={sidebarStyles.element}>
-        <div className={sidebarStyles.title}>{props.title}</div>
         <div className={sidebarStyles.content}>{props.children}</div>
       </div>
     )
