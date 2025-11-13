@@ -13,10 +13,7 @@ module.exports = {
   output: 'export',
   assetPrefix: assetPrefix,
   basePath: basePath,
-  webpack (config) {
-    config.infrastructureLogging = { debug: /PackFileCache/ }
-    return config
-  },
+  turbopack: {},
   images: {
     unoptimized: true,
     remotePatterns: [
